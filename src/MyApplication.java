@@ -18,5 +18,6 @@ public class MyApplication {
             Point point = new Point(x, y);
             shape.addPoint(point);
         }
+        System.out.println(shape.calculatePerimeter());
     }
 }

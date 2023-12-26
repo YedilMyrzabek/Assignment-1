@@ -13,4 +13,17 @@ public class Shape {
     public void addPoint(Point point) {
         shapeList.add(point);
     }
+
+    // calculatePerimeter()
+    public double calculatePerimeter(){
+        double perimeter = 0;
+
+        for (int i = 0; i < shapeList.size()-1; i++) {
+            Point point1 = shapeList.get(i);
+            Point point2 = shapeList.get(i + 1);
+
+            perimeter += point1.distance(point2);
+        }
+        return perimeter + shapeList.getFirst().distance(shapeList.getLast());
+    }
 }
