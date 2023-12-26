@@ -19,5 +19,6 @@ public class MyApplication {
             shape.addPoint(point);
         }
         System.out.println(shape.calculatePerimeter());
+        System.out.println(shape.getAverageSide());
     }
 }

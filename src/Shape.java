@@ -26,4 +26,10 @@ public class Shape {
         }
         return perimeter + shapeList.getFirst().distance(shapeList.getLast());
     }
+
+    // getAverageSide()
+    public double getAverageSide(){
+        return calculatePerimeter() / shapeList.size();
+    }
+
 }
