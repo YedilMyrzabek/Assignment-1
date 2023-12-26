@@ -7,4 +7,12 @@ public class Point {
         this.x = x;
         this.y = y;
     }
+
+    //distance(Point dest) - distance from current point to the dest point
+    public double distance(Point dest){
+        double xDis = this.x - dest.x;
+        double yDis = this.y - dest.y;
+
+        return Math.sqrt(Math.pow(xDis,2.0) + Math.pow(yDis,2.0));
+    }
 }
