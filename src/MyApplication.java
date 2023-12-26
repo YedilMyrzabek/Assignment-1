@@ -16,6 +16,7 @@ public class MyApplication {
             double y = sc.nextDouble();
 
             Point point = new Point(x, y);
+            shape.addPoint(point);
         }
     }
 }
