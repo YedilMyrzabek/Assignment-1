@@ -5,7 +5,7 @@ public class Shape {
     // container of Points (e.g. ArrayList<Point>)
     private ArrayList<Point> shapeList;
 
-    public Shape(){
+    public Shape() {
         shapeList = new ArrayList<>();
     }
 
@@ -15,10 +15,10 @@ public class Shape {
     }
 
     // calculatePerimeter()
-    public double calculatePerimeter(){
+    public double calculatePerimeter() {
         double perimeter = 0;
 
-        for (int i = 0; i < shapeList.size()-1; i++) {
+        for (int i = 0; i < shapeList.size() - 1; i++) {
             Point point1 = shapeList.get(i);
             Point point2 = shapeList.get(i + 1);
 
@@ -28,8 +28,21 @@ public class Shape {
     }
 
     // getAverageSide()
-    public double getAverageSide(){
+    public double getAverageSide() {
         return calculatePerimeter() / shapeList.size();
     }
 
+    // getLongestSide()
+    public double getLongestSide() {
+        double longSide = 0;
+
+        for (int i = 0; i < shapeList.size() - 1; i++) {
+            Point cPoint = shapeList.get(i);
+            Point nPoint = shapeList.get(i + 1);
+            if (cPoint.distance(nPoint) > longSide) {
+                longSide = cPoint.distance(nPoint);
+            }
+        }
+        return longSide;
+    }
 }
